@@ -4,9 +4,9 @@ metadata:
   name: sample-spring-vs
 spec:
   gateways:
-    - dxservice-gw
+    - toolchain/dxservice-gw
   hosts:
-    - sample.telekinesis.shop
+    - frontend.telekinesis.shop
   http:
     - match:
         - uri:

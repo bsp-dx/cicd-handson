@@ -1,0 +1,15 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: dxservice-gw
+  namespace: toolchain
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+  - hosts:
+    - "frontend.telekinesis.shop"
+    port:
+      number: 80
+      name: http
+      protocol: HTTP
