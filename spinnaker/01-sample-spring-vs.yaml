@@ -1,0 +1,18 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: sample-spring-vs
+spec:
+  gateways:
+    - dxservice-gw
+  hosts:
+    - sample.telekinesis.shop
+  http:
+    - match:
+        - uri:
+            prefix: /
+      route:
+        - destination:
+            host: sample-spring-svc
+            port:
+              number: 8080
