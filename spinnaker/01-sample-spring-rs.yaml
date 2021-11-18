@@ -3,7 +3,7 @@ kind: ReplicaSet
 metadata:
   annotations:
     strategy.spinnaker.io/max-version-history: '3'
-    traffic.spinnaker.io/load-balancers: '["service sample-spring-svce"]'
+    traffic.spinnaker.io/load-balancers: '["service sample-spring-svc"]'
   labels:
     app: sample-spring-app
   name: sample-spring-app
@@ -42,5 +42,5 @@ spec:
             periodSeconds: 10
             successThreshold: 1
             timeoutSeconds: 5
-        imagePullSecrets:
-        - name: harbor
+      imagePullSecrets:
+      - name: harbor
